@@ -1,0 +1,10 @@
+*
+!.gitignore
+!README.md
+!LICENSE
+!core/
+!core/**
+!start_process.bat
+!processor.ps1
+!settings.ini
+!ReadMe.txt

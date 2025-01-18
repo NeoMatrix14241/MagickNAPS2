@@ -1,0 +1,89 @@
+2025-01-18 15:46:35.7400 18688 Error importing file. Path: C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0009-QR-A-G1.tif System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0009-QR-A-G1.tif'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at NAPS2.Images.ImageContext.LoadFrames(String path, ProgressHandler progress)
+   at NAPS2.ImportExport.ImageImporter.<>c__DisplayClass2_0.<<Import>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at NAPS2.Util.AsyncProducers.<>c__DisplayClass2_0`1.<<RunProducer>b__0>d.MoveNext()
+   at async IAsyncEnumerable<T> NAPS2.Util.AsyncSink<T>.AsAsyncEnumerable()
+   at TResult System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore<TResult>.GetResult(short token)
+   at async Task NAPS2.Automation.AutomatedScanning.ImportImages() x 2
+2025-01-18 15:46:35.7623 18688 Error importing image: C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0010-QR-A-G1.tif System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0010-QR-A-G1.tif'.
+   at void System.IO.__Error.WinIOError(int errorCode, string maybeFullPath)
+   at void System.IO.FileStream.Init(string path, FileMode mode, FileAccess access, int rights, bool useRights, FileShare share, int bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, string msgPath, bool bFromProxy, bool useLongPath, bool checkHost)
+   at new System.IO.FileStream(string path, FileMode mode, FileAccess access, FileShare share)
+   at IAsyncEnumerable<IMemoryImage> NAPS2.Images.ImageContext.LoadFrames(string path, ProgressHandler progress)
+   at async IAsyncEnumerable<ProcessedImage> NAPS2.ImportExport.ImageImporter.Import(string filePath, ImportParams importParams, ProgressHandler progress)+(?) => { }
+2025-01-18 15:46:35.7623 18688 Error importing file. Path: C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0010-QR-A-G1.tif System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0010-QR-A-G1.tif'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at NAPS2.Images.ImageContext.LoadFrames(String path, ProgressHandler progress)
+   at NAPS2.ImportExport.ImageImporter.<>c__DisplayClass2_0.<<Import>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at NAPS2.Util.AsyncProducers.<>c__DisplayClass2_0`1.<<RunProducer>b__0>d.MoveNext()
+   at async IAsyncEnumerable<T> NAPS2.Util.AsyncSink<T>.AsAsyncEnumerable()
+   at TResult System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore<TResult>.GetResult(short token)
+   at async Task NAPS2.Automation.AutomatedScanning.ImportImages() x 2
+2025-01-18 15:46:35.7623 18688 Error importing image: C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0011-QR-A-G1.tif System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0011-QR-A-G1.tif'.
+   at void System.IO.__Error.WinIOError(int errorCode, string maybeFullPath)
+   at void System.IO.FileStream.Init(string path, FileMode mode, FileAccess access, int rights, bool useRights, FileShare share, int bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, string msgPath, bool bFromProxy, bool useLongPath, bool checkHost)
+   at new System.IO.FileStream(string path, FileMode mode, FileAccess access, FileShare share)
+   at IAsyncEnumerable<IMemoryImage> NAPS2.Images.ImageContext.LoadFrames(string path, ProgressHandler progress)
+   at async IAsyncEnumerable<ProcessedImage> NAPS2.ImportExport.ImageImporter.Import(string filePath, ImportParams importParams, ProgressHandler progress)+(?) => { }
+2025-01-18 15:46:35.7623 18688 Error importing file. Path: C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0011-QR-A-G1.tif System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0011-QR-A-G1.tif'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at NAPS2.Images.ImageContext.LoadFrames(String path, ProgressHandler progress)
+   at NAPS2.ImportExport.ImageImporter.<>c__DisplayClass2_0.<<Import>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at NAPS2.Util.AsyncProducers.<>c__DisplayClass2_0`1.<<RunProducer>b__0>d.MoveNext()
+   at async IAsyncEnumerable<T> NAPS2.Util.AsyncSink<T>.AsAsyncEnumerable()
+   at TResult System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore<TResult>.GetResult(short token)
+   at async Task NAPS2.Automation.AutomatedScanning.ImportImages() x 2
+2025-01-18 15:46:35.7623 18688 Error importing image: C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0012-QR-A-G1.tif System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0012-QR-A-G1.tif'.
+   at void System.IO.__Error.WinIOError(int errorCode, string maybeFullPath)
+   at void System.IO.FileStream.Init(string path, FileMode mode, FileAccess access, int rights, bool useRights, FileShare share, int bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, string msgPath, bool bFromProxy, bool useLongPath, bool checkHost)
+   at new System.IO.FileStream(string path, FileMode mode, FileAccess access, FileShare share)
+   at IAsyncEnumerable<IMemoryImage> NAPS2.Images.ImageContext.LoadFrames(string path, ProgressHandler progress)
+   at async IAsyncEnumerable<ProcessedImage> NAPS2.ImportExport.ImageImporter.Import(string filePath, ImportParams importParams, ProgressHandler progress)+(?) => { }
+2025-01-18 15:46:35.7623 18688 Error importing file. Path: C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0012-QR-A-G1.tif System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0012-QR-A-G1.tif'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at NAPS2.Images.ImageContext.LoadFrames(String path, ProgressHandler progress)
+   at NAPS2.ImportExport.ImageImporter.<>c__DisplayClass2_0.<<Import>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at NAPS2.Util.AsyncProducers.<>c__DisplayClass2_0`1.<<RunProducer>b__0>d.MoveNext()
+   at async IAsyncEnumerable<T> NAPS2.Util.AsyncSink<T>.AsAsyncEnumerable()
+   at TResult System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore<TResult>.GetResult(short token)
+   at async Task NAPS2.Automation.AutomatedScanning.ImportImages() x 2
+2025-01-18 15:46:35.7623 18688 Error importing image: C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0013-QR-A-G1.tif System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0013-QR-A-G1.tif'.
+   at void System.IO.__Error.WinIOError(int errorCode, string maybeFullPath)
+   at void System.IO.FileStream.Init(string path, FileMode mode, FileAccess access, int rights, bool useRights, FileShare share, int bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, string msgPath, bool bFromProxy, bool useLongPath, bool checkHost)
+   at new System.IO.FileStream(string path, FileMode mode, FileAccess access, FileShare share)
+   at IAsyncEnumerable<IMemoryImage> NAPS2.Images.ImageContext.LoadFrames(string path, ProgressHandler progress)
+   at async IAsyncEnumerable<ProcessedImage> NAPS2.ImportExport.ImageImporter.Import(string filePath, ImportParams importParams, ProgressHandler progress)+(?) => { }
+2025-01-18 15:46:35.7623 18688 Error importing file. Path: C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0013-QR-A-G1.tif System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Kyle Capistrano\Desktop\My Projects\naps2\-- TEST FOLDER --\input\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0019-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0019-0013-QR-A-G1.tif'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at NAPS2.Images.ImageContext.LoadFrames(String path, ProgressHandler progress)
+   at NAPS2.ImportExport.ImageImporter.<>c__DisplayClass2_0.<<Import>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at NAPS2.Util.AsyncProducers.<>c__DisplayClass2_0`1.<<RunProducer>b__0>d.MoveNext()
+   at async IAsyncEnumerable<T> NAPS2.Util.AsyncSink<T>.AsAsyncEnumerable()
+   at TResult System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore<TResult>.GetResult(short token)
+   at async Task NAPS2.Automation.AutomatedScanning.ImportImages() x 2

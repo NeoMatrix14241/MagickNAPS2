@@ -1,6 +1,9 @@
+# MagickNAPS2
+A custom script that utilizes both ImageMagick 7 and NAPS2 for Image Preprocessing and OCR
+
 # NAPS2 Batch OCR Processing Script
 
-A PowerShell script for automated OCR processing of images using NAPS2 and ImageMagick, with support for folder structure preservation and image optimization.
+A PowerShell script for automated OCR processing of images using NAPS2 and ImageMagick, with support for folder structure preservation and image preprocessing.
 
 ## Features
 
@@ -15,13 +18,13 @@ A PowerShell script for automated OCR processing of images using NAPS2 and Image
 ## Requirements
 
 - PowerShell 5.1 or higher
-- [NAPS2](https://www.naps2.com/) (Core Console version)
-- [ImageMagick](https://imagemagick.org/) 7.x or higher (optional for preprocessing)
+- [NAPS2](https://www.naps2.com/)
+- [ImageMagick](https://imagemagick.org/) 7.x or higher
 
-## Setup
+## Setup & Download
 
-1. Clone or download this repository
-2. Configure `settings.ini`:
+1. Clone this repository or [download](https://github.com/NeoMatrix14241/MagickNAPS2/releases/download/MagickNAPS2-v1.0.0.0/MagickNAPS2-v1.0.0.0.zip) the latest release
+2. Configure `settings.ini` (The default values are below):
    ```ini
    [CoreBuild]
    Naps2Path=core\App\NAPS2.Console.exe
@@ -33,27 +36,17 @@ A PowerShell script for automated OCR processing of images using NAPS2 and Image
    ArchivePath=archive
 
    [Processing]
+   PreProcessImage=false
    Deskew=false
    Compression=JPEG
    Quality=50
    ```
-
-3. Create the following folder structure:
-   ```
-   root/
-   ├── input/         # Place input files here
-   ├── output/        # OCR'd PDFs will be saved here
-   ├── archive/       # Processed files are moved here
-   └── logs/          # Processing logs
-   ```
+3. Run `start_process.bat`
 
 ## Usage
 
-1. Place your image files in the input folder, maintaining any folder structure you want to preserve
-2. Run the script:
-   ```powershell
-   .\naps2-batch.ps1
-   ```
+1. Configure the `setup.ini` file for folder paths you want to OCR, where to save the files for archive after processing, and the output folder
+2. Run the batch file `start_process.bat`
 3. Check the output folder for processed PDFs
 4. Original files will be moved to the archive folder
 5. Check logs folder for processing details
@@ -65,7 +58,7 @@ A PowerShell script for automated OCR processing of images using NAPS2 and Image
 - **Image Optimization**: Optional preprocessing using ImageMagick
 - **Error Handling**: Robust error handling with detailed logs
 - **File Support**: Handles PDF, TIFF, JPG, PNG files
-- **OCR**: Full text recognition using NAPS2
+- **OCR**: Full text recognition using NAPS2's Tesseract OCR Engine
 
 ## Configuration Options
 

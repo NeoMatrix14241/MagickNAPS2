@@ -40,22 +40,14 @@ A PowerShell script for automated OCR processing of images using NAPS2 and Image
    Compression=JPEG
    Quality=50
    ```
-
-3. Create the following folder structure:
-   ```
-   root/
-   ├── input/         # Place input files here
-   ├── output/        # OCR'd PDFs will be saved here
-   ├── archive/       # Processed files are moved here
-   └── logs/          # Processing logs
-   ```
+3. Run `start_process.bat`
 
 ## Usage
 
 1. Place your image files in the input folder, maintaining any folder structure you want to preserve
 2. Run the script:
    ```powershell
-   .\naps2-batch.ps1
+   .\processor.ps1
    ```
 3. Check the output folder for processed PDFs
 4. Original files will be moved to the archive folder

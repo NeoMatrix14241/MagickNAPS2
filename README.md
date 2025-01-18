@@ -60,7 +60,7 @@ A PowerShell script for automated OCR processing of images using NAPS2 and Image
 - **Image Optimization**: Optional preprocessing using ImageMagick
 - **Error Handling**: Robust error handling with detailed logs
 - **File Support**: Handles PDF, TIFF, JPG, PNG files
-- **OCR**: Full text recognition using NAPS2
+- **OCR**: Full text recognition using NAPS2's Tesseract OCR Engine
 
 ## Configuration Options
 

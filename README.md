@@ -18,8 +18,8 @@ A PowerShell script for automated OCR processing of images using NAPS2 and Image
 ## Requirements
 
 - PowerShell 5.1 or higher
-- [NAPS2](https://www.naps2.com/) (Core Console version)
-- [ImageMagick](https://imagemagick.org/) 7.x or higher (optional for preprocessing)
+- [NAPS2](https://www.naps2.com/)
+- [ImageMagick](https://imagemagick.org/) 7.x or higher
 
 ## Setup
 

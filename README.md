@@ -3,7 +3,7 @@ A custom script that utilizes both ImageMagick 7 and NAPS2 for Image Preprocessi
 
 # NAPS2 Batch OCR Processing Script
 
-A PowerShell script for automated OCR processing of images using NAPS2 and ImageMagick, with support for folder structure preservation and image optimization.
+A PowerShell script for automated OCR processing of images using NAPS2 and ImageMagick, with support for folder structure preservation and image preprocessing.
 
 ## Features
 

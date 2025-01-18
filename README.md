@@ -45,11 +45,8 @@ A PowerShell script for automated OCR processing of images using NAPS2 and Image
 
 ## Usage
 
-1. Place your image files in the input folder, maintaining any folder structure you want to preserve
-2. Run the script:
-   ```powershell
-   .\processor.ps1
-   ```
+1. Configure the `setup.ini` file for folder paths you want to OCR, where to save the files for archive after processing, and the output folder
+2. Run the batch file `start_process.bat`
 3. Check the output folder for processed PDFs
 4. Original files will be moved to the archive folder
 5. Check logs folder for processing details

@@ -23,7 +23,7 @@ A PowerShell script for automated OCR processing of images using NAPS2 and Image
 
 ## Setup
 
-1. Clone or download this repository
+1. Clone this repository or [download](https://github.com/NeoMatrix14241/MagickNAPS2/releases/download/MagickNAPS2-v1.0.0.0/MagickNAPS2-v1.0.0.0.zip) the latest release
 2. Configure `settings.ini`:
    ```ini
    [CoreBuild]

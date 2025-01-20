@@ -20,6 +20,7 @@ A PowerShell script for automated OCR processing of images using NAPS2 and Image
 - PowerShell 5.1 or higher
 - [NAPS2](https://www.naps2.com/)
 - [ImageMagick](https://imagemagick.org/) 7.x or higher
+- [PDFtk Server](https://www.pdflabs.com/tools/pdftk-server/)
 
 ## Setup & Download
 

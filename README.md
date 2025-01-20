@@ -1,4 +1,4 @@
-# MagickNAPS2
+# MagickNAPS2 for Sir Marc
 A custom script that utilizes both ImageMagick 7 and NAPS2 for Image Preprocessing and OCR
 
 # NAPS2 Batch OCR Processing Script

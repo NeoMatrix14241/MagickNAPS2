@@ -284,13 +284,14 @@ if (-not (Test-Path $settingsFile)) {
 $settings = Get-IniContent $settingsFile
 
 # Define paths from settings
+# Join-Path $rootPath
 $rootPath = $PSScriptRoot
-$inputPath = Join-Path $rootPath $settings["Folders"]["InputPath"]
-$outputPath = Join-Path $rootPath $settings["Folders"]["OutputPath"]
-$archivePath = Join-Path $rootPath $settings["Folders"]["ArchivePath"]
-$naps2Path = Join-Path $rootPath $settings["CoreBuild"]["Naps2Path"]
+$inputPath =  $settings["Folders"]["InputPath"]
+$outputPath = $settings["Folders"]["OutputPath"]
+$archivePath = $settings["Folders"]["ArchivePath"]
+$naps2Path = $settings["CoreBuild"]["Naps2Path"]
 $magickPath = $settings["CoreBuild"]["ImageMagickPath"]
-$pdftkPath = Join-Path $rootPath $settings["CoreBuild"]["PdftkPath"]
+$pdftkPath = $settings["CoreBuild"]["PdftkPath"]
 $logsPath = Join-Path $rootPath "logs"
 $logFile = Join-Path $logsPath "processing_$(Get-Date -Format 'yyyyMMdd_HHmmss').log"
 

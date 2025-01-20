@@ -32,9 +32,9 @@ A PowerShell script for automated OCR processing of images using NAPS2 and Image
    ImageMagickPath=core\magick.exe
 
    [Folders]
-   InputPath=input
-   OutputPath=output
-   ArchivePath=archive
+   InputPath= C:\OCR\input
+   OutputPath=C:\OCR\output
+   ArchivePath=C:\OCR\archive
 
    [Processing]
    PreProcessImage=false

@@ -25,7 +25,7 @@ echo.
 set /p userInput=Please type "Sir Marc Lang Malakas" to proceed: 
 if /i "%userInput%"=="Sir Marc Lang Malakas" (
 	cls
-	powershell.exe -ExecutionPolicy RemoteSigned -File "processor.ps1"
+	powershell.exe -ExecutionPolicy RemoteSigned -File "%~dp0\processor.ps1"
 	pause
 ) else (
 	echo Mali ng input, umulit ka.

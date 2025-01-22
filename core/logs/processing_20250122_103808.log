@@ -1,0 +1,70 @@
+2025-01-22 10:38:08: Starting OCR processing...
+2025-01-22 10:38:09: ----------------------------------------
+2025-01-22 10:38:09: Processing folder: NCR-DOE-Taguig-B0004S2-20241030-0001-QR-A-G1
+2025-01-22 10:38:09: Files found: 8
+2025-01-22 10:38:09: Path: -- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0001-QR-A-G1
+2025-01-22 10:38:09: ----------------------------------------
+2025-01-22 10:38:09: Input: NCR-DOE-Taguig-B0004S2-20241030-0001-0001-QR-A-G1.tif
+2025-01-22 10:38:09: Input: NCR-DOE-Taguig-B0004S2-20241030-0001-0002-QR-A-G1.tif
+2025-01-22 10:38:09: Input: NCR-DOE-Taguig-B0004S2-20241030-0001-0003-QR-A-G1.tif
+2025-01-22 10:38:09: Input: NCR-DOE-Taguig-B0004S2-20241030-0001-0004-QR-A-G1.tif
+2025-01-22 10:38:09: Input: NCR-DOE-Taguig-B0004S2-20241030-0001-0005-QR-A-G1.tif
+2025-01-22 10:38:09: Input: NCR-DOE-Taguig-B0004S2-20241030-0001-0006-QR-A-G1.tif
+2025-01-22 10:38:09: Input: NCR-DOE-Taguig-B0004S2-20241030-0001-0007-QR-A-G1.tif
+2025-01-22 10:38:09: Input: NCR-DOE-Taguig-B0004S2-20241030-0001-0007-QR-A-G1_preprocessed.tif
+2025-01-22 10:38:09: Output: NCR-DOE-Taguig-B0004S2-20241030-0001-QR-A-G1.pdf
+2025-01-22 10:38:09: ----------------
+2025-01-22 10:38:09: Converting paths for processing...
+2025-01-22 10:38:09: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0001-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0001-0001-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:09: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0001-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0001-0002-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:09: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0001-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0001-0003-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:09: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0001-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0001-0004-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:09: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0001-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0001-0005-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:09: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0001-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0001-0006-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:09: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0001-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0001-0007-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:09: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0001-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0001-0007-QR-A-G1_preprocessed.tif". Using original path.
+2025-01-22 10:38:10: Total path length: 1621 characters
+2025-01-22 10:38:10: Processing all files in single batch...
+2025-01-22 10:38:10: Running NAPS2 OCR...
+2025-01-22 10:38:36: NAPS2 Exit Code: 0
+2025-01-22 10:38:36: Output file created successfully. Size: 8876930 bytes
+2025-01-22 10:38:36: Processing completed successfully
+2025-01-22 10:38:36: Archived: NCR-DOE-Taguig-B0004S2-20241030-0001-0001-QR-A-G1.tif
+2025-01-22 10:38:36: Archived: NCR-DOE-Taguig-B0004S2-20241030-0001-0002-QR-A-G1.tif
+2025-01-22 10:38:36: Archived: NCR-DOE-Taguig-B0004S2-20241030-0001-0003-QR-A-G1.tif
+2025-01-22 10:38:36: Archived: NCR-DOE-Taguig-B0004S2-20241030-0001-0004-QR-A-G1.tif
+2025-01-22 10:38:36: Archived: NCR-DOE-Taguig-B0004S2-20241030-0001-0005-QR-A-G1.tif
+2025-01-22 10:38:36: Archived: NCR-DOE-Taguig-B0004S2-20241030-0001-0006-QR-A-G1.tif
+2025-01-22 10:38:36: Archived: NCR-DOE-Taguig-B0004S2-20241030-0001-0007-QR-A-G1.tif
+2025-01-22 10:38:36: Archived: NCR-DOE-Taguig-B0004S2-20241030-0001-0007-QR-A-G1_preprocessed.tif
+2025-01-22 10:38:36: Folder completed successfully
+2025-01-22 10:38:36: ----------------------------------------
+2025-01-22 10:38:36: ----------------------------------------
+2025-01-22 10:38:36: Processing folder: NCR-DOE-Taguig-B0004S2-20241030-0002-QR-A-G1
+2025-01-22 10:38:36: Files found: 9
+2025-01-22 10:38:36: Path: -- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0002-QR-A-G1
+2025-01-22 10:38:36: ----------------------------------------
+2025-01-22 10:38:36: Input: NCR-DOE-Taguig-B0004S2-20241030-0002-0001-QR-A-G1.tif
+2025-01-22 10:38:36: Input: NCR-DOE-Taguig-B0004S2-20241030-0002-0002-QR-A-G1.tif
+2025-01-22 10:38:36: Input: NCR-DOE-Taguig-B0004S2-20241030-0002-0003-QR-A-G1.tif
+2025-01-22 10:38:36: Input: NCR-DOE-Taguig-B0004S2-20241030-0002-0004-QR-A-G1.tif
+2025-01-22 10:38:36: Input: NCR-DOE-Taguig-B0004S2-20241030-0002-0005-QR-A-G1.tif
+2025-01-22 10:38:36: Input: NCR-DOE-Taguig-B0004S2-20241030-0002-0006-QR-A-G1.tif
+2025-01-22 10:38:36: Input: NCR-DOE-Taguig-B0004S2-20241030-0002-0007-QR-A-G1.tif
+2025-01-22 10:38:36: Input: NCR-DOE-Taguig-B0004S2-20241030-0002-0008-QR-A-G1.tif
+2025-01-22 10:38:36: Input: NCR-DOE-Taguig-B0004S2-20241030-0002-0009-QR-A-G1.tif
+2025-01-22 10:38:36: Output: NCR-DOE-Taguig-B0004S2-20241030-0002-QR-A-G1.pdf
+2025-01-22 10:38:36: ----------------
+2025-01-22 10:38:36: Converting paths for processing...
+2025-01-22 10:38:36: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0002-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0002-0001-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:36: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0002-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0002-0002-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:36: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0002-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0002-0003-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:36: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0002-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0002-0004-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:36: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0002-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0002-0005-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:36: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0002-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0002-0006-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:36: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0002-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0002-0007-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:36: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0002-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0002-0008-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:36: Warning: Could not get short path for "C:\OCR\input\-- TEST FOLDER --\archive\-- TEST FOLDER --\archive\test files\TEXT BASED\NCR-DOE-Taguig-B0004S2-20241030-0002-QR-A-G1\NCR-DOE-Taguig-B0004S2-20241030-0002-0009-QR-A-G1.tif". Using original path.
+2025-01-22 10:38:36: Total path length: 1796 characters
+2025-01-22 10:38:36: Processing all files in single batch...
+2025-01-22 10:38:36: Running NAPS2 OCR...

@@ -110,29 +110,77 @@ function Optimize-Image {
     )
     
     try {
-        $magickArgs = @(
-            "convert"
-            $inputPath
-        )
+        # Get original file size (from input folder)
+        $originalSize = (Get-Item $inputPath).Length
+        Write-Log "Original file size (from input): $([Math]::Round($originalSize/1KB, 2)) KB"
 
-        if ($deskew) {
+        # Ensure output directory exists
+        $outputDir = Split-Path $outputPath -Parent
+        if (-not (Test-Path $outputDir)) {
+            New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
+        }
+
+        # Quote paths to handle spaces
+        $quotedInputPath = """$inputPath"""
+        $quotedOutputPath = """$outputPath"""
+
+        # Updated for ImageMagick 7 syntax with proper compression handling
+        $magickArgs = @($quotedInputPath)
+
+        # Add deskew if enabled
+        if ($deskew -eq $true) {
+            Write-Log "Deskew enabled, adding deskew parameter"
             $magickArgs += @("-deskew", "40%")
         }
 
-        $magickArgs += @(
-            "-compress", $compression
-            "-quality", $quality
-            $outputPath
-        )
-        
-        & $magickPath $magickArgs 2>&1
-        if ($LASTEXITCODE -eq 0 -and (Test-Path $outputPath)) {
-            return $true
+        # Add compression and quality if compression is specified
+        if (-not [string]::IsNullOrWhiteSpace($compression)) {
+            $magickArgs += @(
+                "-compress", $compression
+                "-quality", $quality
+            )
+            Write-Log "Using compression: $compression with quality: $quality"
+        } else {
+            Write-Log "No compression specified, using default settings"
         }
+
+        $magickArgs += $quotedOutputPath
+        
+        Write-Log "Running ImageMagick command: $magickPath $($magickArgs -join ' ')"
+        
+        $magickOutput = & $magickPath $magickArgs 2>&1
+        $magickExitCode = $LASTEXITCODE
+        
+        if ($magickExitCode -ne 0) {
+            Write-Log "ImageMagick failed with exit code $magickExitCode. Output: $magickOutput" "Error"
+            return $false
+        }
+        
+        if (Test-Path $outputPath) {
+            $compressedSize = (Get-Item $outputPath).Length
+            if ($compressedSize -gt 0) {
+                $ratio = [Math]::Round(($compressedSize / $originalSize) * 100, 2)
+                $savings = [Math]::Round(($originalSize - $compressedSize)/1KB, 2)
+                Write-Log "Compression comparison:"
+                Write-Log "- Original input size: $([Math]::Round($originalSize/1KB, 2)) KB"
+                Write-Log "- Compressed temp size: $([Math]::Round($compressedSize/1KB, 2)) KB"
+                Write-Log "- Space saved: $savings KB ($ratio% of original)"
+                
+                # Always return true to use the optimized version
+                Write-Log "Using optimized version from temp directory"
+                return $true
+            } else {
+                Write-Log "ImageMagick created empty output file" "Error"
+                Remove-Item $outputPath -Force -ErrorAction SilentlyContinue
+                return $false
+            }
+        }
+        
+        Write-Log "ImageMagick failed to create output file" "Error"
         return $false
     }
     catch {
-        Write-Log "ImageMagick Error: $_"
+        Write-Log "ImageMagick Error: $_" "Error"
         return $false
     }
 }
@@ -301,11 +349,51 @@ $imgCompression = $settings["Processing"]["Compression"]
 $imgQuality = [int]$settings["Processing"]["Quality"]
 $preProcessImage = [System.Convert]::ToBoolean($settings["Processing"]["PreProcessImage"])
 
+# Verify compression is valid
+if ([string]::IsNullOrEmpty($imgCompression)) {
+    Write-Log "Warning: Compression not specified, defaulting to JPEG"
+    $imgCompression = "JPEG"
+}
+
 # Create required directories if they don't exist
 @($inputPath, $outputPath, $archivePath, $logsPath) | ForEach-Object {
     if (-not (Test-Path $_)) {
         New-Item -ItemType Directory -Path $_ | Out-Null
     }
+}
+
+# Add new function to save settings
+function Save-Settings {
+    param (
+        [string]$settingsPath,
+        [hashtable]$settings
+    )
+    
+    try {
+        $output = @()
+        foreach ($section in $settings.Keys) {
+            $output += "[$section]"
+            foreach ($key in $settings[$section].Keys) {
+                $value = $settings[$section][$key]
+                $output += "$key=$value"
+            }
+            $output += ""
+        }
+        
+        $output | Out-File -FilePath $settingsPath -Encoding UTF8 -Force
+        Write-Log "Settings saved successfully to: $settingsPath"
+        return $true
+    }
+    catch {
+        Write-Log "Error saving settings: $_" "Error"
+        return $false
+    }
+}
+
+# Update main script section to save settings before processing
+# Place this right before the timer starts
+if (-not (Save-Settings -settingsPath $settingsFile -settings $settings)) {
+    Write-Log "Warning: Failed to save settings, continuing with current configuration" "Warning"
 }
 
 # Add timer start before processing begins
@@ -346,26 +434,43 @@ foreach ($group in $fileGroups) {
         }
 
         $processedFiles = @()
+        Write-Log "----------------------------------------"
+        Write-Log "Starting image processing phase..."
+        
         foreach ($file in $group.Group) {
             if ($preProcessImage) {
+                Write-Log "ImageMagick preprocessing ENABLED"
                 $tempDir = Join-Path $PSScriptRoot "temp"
                 if (-not (Test-Path $tempDir)) {
                     New-Item -ItemType Directory -Path $tempDir -Force | Out-Null
+                    Write-Log "Created temp directory: $tempDir"
                 }
 
-                $optimizedPath = Join-Path $tempDir "$($file.Name)"
+                $optimizedPath = Join-Path $tempDir $file.Name
+                Write-Log "Preprocessing with ImageMagick: $($file.Name)"
+                
                 if (Optimize-Image -inputPath $file.FullName -outputPath $optimizedPath -deskew $useDeskew -compression $imgCompression -quality $imgQuality) {
-                    Write-Log "Input: $($file.Name) - Processed with ImageMagick"
-                    $processedFiles += Get-Item $optimizedPath
-                } else {
-                    Write-Log "Input: $($file.Name) - ImageMagick processing failed, using original"
-                    $processedFiles += $file
+                    if (Test-Path $optimizedPath) {
+                        Write-Log "Successfully preprocessed, will OCR optimized version: $($file.Name)"
+                        $processedFiles += Get-Item $optimizedPath
+                        continue
+                    }
                 }
+                Write-Log "Preprocessing failed, will OCR original file: $($file.Name)"
             } else {
-                Write-Log "Input: $($file.Name)"
-                $processedFiles += $file
+                Write-Log "ImageMagick preprocessing DISABLED"
+                Write-Log "Will OCR original file: $($file.Name)"
             }
+            $processedFiles += $file
         }
+
+        Write-Log "----------------------------------------"
+        Write-Log "Starting OCR phase..."
+        Write-Log "Files to be OCR'd: $($processedFiles.Count)"
+        foreach ($file in $processedFiles) {
+            Write-Log "Will OCR: $($file.FullName)"
+        }
+        Write-Log "----------------------------------------"
 
         $outputFileName = "$folderName.pdf"
         $outputFilePath = Join-Path $outputDir $outputFileName
@@ -425,4 +530,6 @@ Write-Log "Minutes: $($totalTime.Minutes)"
 Write-Log "Seconds: $($totalTime.Seconds)"
 Write-Log "Total Seconds: $($totalTime.TotalSeconds)"
 Write-Log "----------------------------------------"
+Write-Log "----------------------------------------"
+Write-Log "Processing completed."
 Write-Log "Processing completed."

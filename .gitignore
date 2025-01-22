@@ -9,3 +9,7 @@
 !settings.ini
 !ReadMe.txt
 !launcher.bat
+core/temp/
+core/temp/**
+core/logs/
+core/logs/**

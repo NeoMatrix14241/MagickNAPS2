@@ -212,6 +212,26 @@ $saveButton.Add_Click({
 })
 $form.Controls.Add($saveButton)
 
+# Add cleanup function before the Start Process Button
+function Invoke-Cleanup {
+    $tempPaths = @(
+        (Join-Path $PSScriptRoot "temp"),
+        (Join-Path $env:TEMP "MagickNAPS2*")
+    )
+    
+    foreach ($path in $tempPaths) {
+        try {
+            if (Test-Path $path) {
+                Remove-Item $path -Recurse -Force
+                Write-Host "Cleaned up: $path"
+            }
+        }
+        catch {
+            Write-Host "Error cleaning up $path`: $_"
+        }
+    }
+}
+
 # Add Start Process Button
 $startButton = New-Object System.Windows.Forms.Button
 $startButton.Location = New-Object System.Drawing.Point(360,400)
@@ -221,10 +241,22 @@ $startButton.Add_Click({
     try {
         $batPath = Join-Path $PSScriptRoot "start_process.bat"
         Start-Process $batPath -Wait
-        [System.Windows.Forms.MessageBox]::Show("Processing completed!", "Success", [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Information)
+        Invoke-Cleanup
+        [System.Windows.Forms.MessageBox]::Show(
+            "Processing completed! All temporary files have been cleaned up.",
+            "Success",
+            [System.Windows.Forms.MessageBoxButtons]::OK,
+            [System.Windows.Forms.MessageBoxIcon]::Information
+        )
     }
     catch {
-        [System.Windows.Forms.MessageBox]::Show("Error running process: $_", "Error", [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Error)
+        [System.Windows.Forms.MessageBox]::Show(
+            "Error running process: $_`nAttempting cleanup...",
+            "Error",
+            [System.Windows.Forms.MessageBoxButtons]::OK,
+            [System.Windows.Forms.MessageBoxIcon]::Error
+        )
+        Invoke-Cleanup
     }
 })
 $form.Controls.Add($startButton)

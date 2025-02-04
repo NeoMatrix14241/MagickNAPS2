@@ -1,6 +1,8 @@
 # MagickNAPS2 for Sir Marc
 A custom script that utilizes both ImageMagick 7 and NAPS2 for Image Preprocessing and OCR
 
+![image](https://github.com/user-attachments/assets/913f4b55-583d-490f-8d30-71f60a1b5ec7)
+
 # NAPS2 Batch OCR Processing Script
 
 A PowerShell script for automated OCR processing of images using NAPS2 and ImageMagick, with support for folder structure preservation and image preprocessing.

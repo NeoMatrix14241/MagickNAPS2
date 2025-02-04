@@ -17,7 +17,7 @@ A PowerShell script for automated OCR processing of images using NAPS2 and Image
 - Detailed logging system
 - Configurable settings via INI file
 
-## Requirements
+## Requirements (No need to donwload, already included in the core build)
 
 - PowerShell 5.1 or higher
 - [NAPS2](https://www.naps2.com/)
